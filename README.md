@@ -1,4 +1,4 @@
-# Oppkey Gallery for RICOH THETA
+# RICOH THETA Technique Gallery
 
 Test bed for 360 image web site technologies.
 
@@ -37,4 +37,4 @@ Example
 
 ![main](images/gallery-main.png)
 
-![main](images/oppkey-gallery-2.png)
+![main](images/mobile-sample.jpg)
