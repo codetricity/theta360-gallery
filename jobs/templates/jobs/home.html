@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js" integrity="sha256-SNDsmWBFQwJAjxLymQu5Fqh6rW4RKLJXUQboy3O0BUA=" crossorigin="anonymous"></script>
 
   <style>
     .bd-placeholder-img {
@@ -36,6 +37,10 @@
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
       }
+    }
+    a-scene {
+      height: 100%;
+      width: 100%;
     }
   </style>
   <!-- Custom styles for this template -->
@@ -61,9 +66,14 @@
   </header>
 
   <main role="main">
+    <!-- not working.  want to do overlay -->
+      <a-scene embedded>
+          <a-sky id="background-image" src="{% static 'sample.jpg' %}">
+      <section class="jumbotron text-center">
+      <div class="container bg">
 
-    <section class="jumbotron text-center">
-      <div class="container">
+
+
           <img src="{% static 'theta360guide.png' %}" height="50" />
 
         <h1 class="jumbotron-heading">RICOH THETA Technique Gallery</h1>
@@ -72,8 +82,13 @@
         <p>
           <a href="/blog/about/" class="btn btn-primary my-2">Submit Images</a>
         </p>
+
       </div>
     </section>
+  </a-sky>
+
+  </a-scene>
+
 
     <div class="album py-5 bg-light">
       <div class="container">
