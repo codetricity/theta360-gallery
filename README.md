@@ -38,3 +38,5 @@ Example
 ![main](images/gallery-main.png)
 
 ![main](images/mobile-sample.jpg)
+
+![Analytics](https://ga-beacon.appspot.com/UA-73311422-5/theta360-gallery)
