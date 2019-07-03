@@ -3,6 +3,8 @@ from django.db import models
 
 class Blog(models.Model):
     title = models.CharField(max_length=255)
+    production = models.BooleanField(default=True)
+    testing_tag = models.CharField(max_length=80, default='production')
     pub_date = models.DateTimeField()
     body = models.TextField()
     body2 = models.TextField(default=' ', blank=True)

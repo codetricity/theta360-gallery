@@ -68,6 +68,7 @@
     <h2>Full List of Ideas</h2>
     <hr />
     {% for blog in blogs.all %}
+        {% if blog.production %}
         <div class="col-md-5">
             <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title}} </h3></a>
 
@@ -82,6 +83,7 @@
 
         </div>
         <hr />
+        {% endif %}
 
     {% endfor %}
 
