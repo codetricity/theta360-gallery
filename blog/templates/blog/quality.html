@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>THETA Technique Gallery</title>
+  <title>RICOH THETA Image Quality Tests</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -60,35 +60,48 @@
   </header>
 
   <main role="main">
-      <div class="container">
 
 
-    <h1 class="text-center pt-3">Image Quality Tests</h1>
-    <br />
-    <br />
-    <h2>Reducing Image Size and Quality of RICOH THETA Z1 Images</h2>
-    <hr />
-    {% for blog in blogs.all %}
-        {% if blog.testing_tag == "quality_tuba" %}
-        <div class="col-md-5">
-            <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title}} </h3></a>
 
-            {{ blog.pub_date_pretty }}
-            <br>
-            <img class="card-img-top img-fluid" 
-            src="{{ blog.image.url }}" />
-            <br>
-            <!-- no parenthesis is used to call the method 
+
+
+              <h1 class="text-center pt-3">Image Quality Tests</h1>
+              <br />
+              <br />
+              <div class="container">
+              <h2>Reducing Image Size and Quality of RICOH THETA Z1 Images</h2>
+              <p>Testing Tag: quality_tuba. RICOH THETA Z1 images</p>
+              <hr />
+            </div>
+              <div class="album py-5 bg-light">
+                    <div class="container">
+                        <div class="row">
+
+              {% for blog in blogs.all %}
+              {% if blog.testing_tag == "quality_tuba" %}
+              <a href="{% url 'detail' blog.id %}">
+              <div class="col-md-3">
+
+                      <h3>{{ blog.title}} </h3>
+             
+
+                  {{ blog.pub_date_pretty }}
+                  <br>
+                  <img class="card-img-top img-fluid" src="{{ blog.image.url }}" />
+                  <br>
+                  <!-- no parenthesis is used to call the method 
             this is specific to django -->
-            <p>{{ blog.summary }}</p>
+                  <p>{{ blog.summary }}</p>
+                </a>
 
-        </div>
-        <hr />
-        {% endif %}
+              </div>
+              <hr />
+              {% endif %}
 
-    {% endfor %}
-
-</div>
+              {% endfor %}
+            </div>
+          </div>
+      </div>
 
   </main>
 
