@@ -15,6 +15,21 @@ Test bed for 360 image web site technologies.
 
 Setup a local Python virtualenv and activate it.
 
+### virtualenv
+
+    C:\>virtualenv myenv
+    Using base prefix 'c:\\users\\craigdev\\appdata\\local\\programs\\python\\python37-32'
+    New python executable in C:\Users\craigdev\Development\django\gallery\theta360-gallery\myenv\Scripts\python.exe
+    Installing setuptools, pip, wheel...
+    done.
+
+Activate virtualenv
+
+
+
+
+### Python requirements
+
     pip install -r requirements.txt
 
 ## Run it
