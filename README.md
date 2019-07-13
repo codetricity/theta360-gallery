@@ -25,8 +25,9 @@ Setup a local Python virtualenv and activate it.
 
 Activate virtualenv
 
+Run the activate script.  This varies depending on whether you are using Linux, Mac, or Windows. Example for activating virtualenv on Windows is shown below.
 
-
+![virtualenv activation](images/virtualenv.png)
 
 ### Python requirements
 
