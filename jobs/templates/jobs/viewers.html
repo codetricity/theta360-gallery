@@ -90,8 +90,7 @@
         them most likely would suite your needs. Let's compare their functionality and 
         pricing (yes, some of them are not free). We will only test simple viewers 
         that you can embed on your website, with basic or no VR functionality. 
-        Most reviews provide links to demos to see the 360° image. 
-        The demos are usually configured with default settings. 
+       
     </p>
 
     {% for viewer in viewers.all %}
@@ -108,8 +107,6 @@
          <a href="{{ viewer.info_url }}">More Information</a>
         <br>
         Price: {{ viewer.price }}
-        <br>
-        <a href="{{ viewer.demo_url }}">Demo</a>
         
         <hr>
         
