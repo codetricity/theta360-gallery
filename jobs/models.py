@@ -17,11 +17,20 @@ class Job(models.Model):
 
 
 class Viewer(models.Model):
-
+    DISTRIBUTION_METHOD = (
+        ('download', "Downloadable Library"),
+        ('cloud', "Cloud Service"),
+    )
     name = models.CharField(max_length=40)
     body = models.TextField()
     projections = models.CharField(max_length=80, blank=True)
     license = models.CharField(max_length=40, blank=True)
+    distribution_method = models.CharField(
+        max_length=50,
+        choices=DISTRIBUTION_METHOD,
+        blank=True
+        )
+    free = models.BooleanField(default=False)
     price = models.CharField(max_length=40, blank=True)
     info_url = models.CharField(max_length=160, blank=True)
     demo_url = models.CharField(max_length=160, blank=True)

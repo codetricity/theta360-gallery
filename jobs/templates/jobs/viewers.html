@@ -104,10 +104,12 @@
         <br>
         License: {{ viewer.license }}
         <br>
-         <a href="{{ viewer.info_url }}">More Information</a>
+        Distribution Method: {{ viewer.get_distribution_method_display }}
         <br>
         Price: {{ viewer.price }}
-        
+        <br>        
+
+         <a href="{{ viewer.info_url }}">More Information</a>
         <hr>
         
 
