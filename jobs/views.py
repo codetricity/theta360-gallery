@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Job
+from .models import Job, Viewer
 
 
 def home(request):
@@ -9,4 +9,5 @@ def home(request):
 
 
 def viewers(request):
-    return render(request, 'jobs/viewers.html')
+    viewers = Viewer.objects
+    return render(request, 'jobs/viewers.html', {'viewers': viewers})

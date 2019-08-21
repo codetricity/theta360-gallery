@@ -42,6 +42,9 @@
       height: 100%;
       width: 100%;
     }
+    .subhead, h1, .attribution {
+      text-align: center;
+    }
   </style>
   <!-- Custom styles for this template -->
 </head>
@@ -68,6 +71,56 @@
   </header>
 
   <main role="main">
+    <div class="container">
+
+    
+    <h1> 360 Photo Viewer Comparison</h1>
+    <p class="subhead">
+        Compare and pick the best 360 photo viewer suitable to your needs
+    </p>
+    <p class="attribution">
+    Original comparison by 
+    <a href="https://community.theta360.guide/u/egene/summary">eGene</a> of 
+    <a href="https://360photo-to-video.com/">360photo-to-video.com</a>. Extended by the 
+    <a href="https://community.theta360.guide/">theta360.guide community</a>.
+  </p>
+    
+    <p>
+        
+        Have you created a beautiful  image and now looking for the best tool to 
+        convert your image to 360° view? There are plenty of good viewers and one of 
+        them most likely would suite your needs. Let's compare their functionality and 
+        pricing (yes, some of them are not free). We will only test simple viewers 
+        that you can embed on your website, with basic or no VR functionality. 
+        Most reviews provide links to demos to see the 360° image. 
+        The demos are usually configured with default settings. 
+    </p>
+
+    {% for viewer in viewers.all %}
+        <br>
+        <strong>{{viewer.name}}</strong>
+        <br>
+        <p>
+          {{ viewer.body }}
+        </p>
+        Supported projections: {{ viewer.projections }}
+        <br>
+        License: {{ viewer.license }}
+        <br>
+         <a href="{{ viewer.info_url }}">More Information</a>
+        <br>
+        Price: {{ viewer.price }}
+        <br>
+        <a href="{{ viewer.demo_url }}">Demo</a>
+        
+        <hr>
+        
+
+
+    {% endfor %}
+    
+  </div>
+    
     
 
   </main>
