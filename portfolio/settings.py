@@ -25,7 +25,7 @@ SECRET_KEY = 'u4)4039kjaeu=e=1d&(-9y18)^9#m706-2u5bl_43&++zh)6&z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gallery.theta360.guide', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'social_django',
     'management',
+    'social_django',
+
 ]
 
 MIDDLEWARE = [
