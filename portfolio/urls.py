@@ -18,12 +18,22 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include
+from django.contrib.auth.views import LogoutView
+
+
 import jobs.views
+import management.views as manage_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', jobs.views.home, name='home'),        
     path('viewers/', jobs.views.viewers, name='viewers'),
-    path('blog/', include('blog.urls'),
-    ),
+    path('blog/', include('blog.urls')),
+    path('manage/', manage_views.manage, name='manage'),
+    path('', include('social_django.urls', namespace='social')),
+    path(
+        'logout/',
+        LogoutView.as_view(template_name=settings.LOGOUT_REDIRECT_URL),
+        name='logout'
+        ),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
