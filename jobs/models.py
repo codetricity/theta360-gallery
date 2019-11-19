@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Job(models.Model):
+    order = models.PositiveIntegerField()
     image = models.ImageField(upload_to='images/')
     title = models.CharField(max_length=80)
     summary = models.CharField(max_length=200)
@@ -13,8 +14,8 @@ class Job(models.Model):
     technique = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.title
-
+        return str(self.order) + self.title
+ 
 
 class Viewer(models.Model):
     DISTRIBUTION_METHOD = (

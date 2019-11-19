@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['gallery.theta360.guide', 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'suit',
     'jobs.apps.JobsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,7 +46,20 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
 ]
 
+# admin panel configuration
+
 CKEDITOR_UPLOAD_PATH = 'article_uploads'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'width': 600,
+    },
+}
+
+# django suit
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'theta360 gallery',
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

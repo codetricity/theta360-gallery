@@ -98,18 +98,16 @@
         <div class="row">
 
           {% for job in jobs.all %}
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
+            <div class="card col-lg-3 col-md-4 col-sm-6 mb-4 shadow-sm">
+              <div class="card-body">
+
               <a href="{{job.more_info_url }}">
               <img class="card-img-top" src="{{ job.image.url }}" />
             </a>
-              <div class="card-body">
                 <h2>
                     {{ job.title }}
                 </h2>
                   
-
-                
                   <p class="card-text">
 
                   {{ job.summary }}
@@ -133,13 +131,8 @@
                       Technique: 
                   </strong>
                 {{ job.technique }}
-
-                <!-- <br />
-                  <a href="{{ job.more_info_url }}">View Image</a>
-                </p> -->
             </div>
           </div>
-        </div>
         {% endfor %}
       </div>
     </div>

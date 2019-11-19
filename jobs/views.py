@@ -4,7 +4,7 @@ from .models import Job, Viewer
 
 
 def home(request):
-    jobs = Job.objects
+    jobs = Job.objects.order_by('order')
     return render(request, 'jobs/home.html', {'jobs': jobs})
 
 
