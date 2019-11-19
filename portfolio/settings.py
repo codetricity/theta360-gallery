@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'u4)4039kjaeu=e=1d&(-9y18)^9#m706-2u5bl_43&++zh)6&z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['gallery.theta360.guide', 'localhost', '127.0.0.1']
 
@@ -41,8 +41,11 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'management',
     'social_django',
-
+    'ckeditor',
+    'ckeditor_uploader',
 ]
+
+CKEDITOR_UPLOAD_PATH = 'article_uploads'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -31,6 +31,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('manage/', manage_views.manage, name='manage'),
     path('', include('social_django.urls', namespace='social')),
+    path('ckeditor/', include('ckeditor_uploader.urls') ),
     path(
         'logout/',
         LogoutView.as_view(template_name=settings.LOGOUT_REDIRECT_URL),

@@ -1,16 +1,14 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 class Blog(models.Model):
     title = models.CharField(max_length=255)
     production = models.BooleanField(default=True)
     testing_tag = models.CharField(max_length=80, default='production')
     pub_date = models.DateTimeField()
-    body = models.TextField()
-    body2 = models.TextField(default=' ', blank=True)
-    body3 = models.TextField(default=' ', blank=True)
-    body4 = models.TextField(default=' ', blank=True)
-    body5 = models.TextField(default=' ', blank=True)
+    body = RichTextUploadingField()
+
     image = models.ImageField(upload_to='images/')
 
     # django template calls method with something like blog.summary

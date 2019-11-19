@@ -9,7 +9,6 @@ idna==2.8
 mccabe==0.6.1
 oauthlib==3.1.0
 Pillow==6.0.0
-psycopg2==2.8.2
 pycodestyle==2.5.0
 pyflakes==2.1.1
 PyJWT==1.7.1
