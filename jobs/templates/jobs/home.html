@@ -42,6 +42,23 @@
       height: 100%;
       width: 100%;
     }
+    .job-card {
+      padding: 1rem 0rem;
+    }
+
+    .job-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .job-subhead {
+      font-weight: 500;
+    }
+
+    .job-summary {
+      font-size: .8rem;
+    }
+
   </style>
   <!-- Custom styles for this template -->
 </head>
@@ -99,37 +116,40 @@
 
           {% for job in jobs.all %}
             <div class="card col-lg-3 col-md-4 col-sm-6 mb-4 shadow-sm">
-              <div class="card-body">
+              <div class="card-body job-card">
 
               <a href="{{job.more_info_url }}">
               <img class="card-img-top" src="{{ job.image.url }}" />
             </a>
-                <h2>
+                <div class="job-title">
                     {{ job.title }}
-                </h2>
+                </div>
                   
                   <p class="card-text">
-
+                    <span class="job-summary">
                   {{ job.summary }}
+                </span>
                   <br />
-                  <strong>
+                  <span class="job-subhead">
                     Photographer:
-                  </strong>
+                  </span>
                   {{job.photographer}}
                   <br>
-                  <strong>
+                  <span class="job-subhead">
                     Photo Studio:
-                  </strong>
+                  </span>
                     {{job.photo_studio}}
                     <br />
-                  <strong>
-                      Camera 
-                  </strong>
+                    <span class="job-subhead">
+
+                    Camera: 
+                  </span>
                   {{job.camera_model}}
                 <br />
-                  <strong>
-                      Technique: 
-                  </strong>
+                <span class="job-subhead">
+
+                Technique: 
+                  </span>
                 {{ job.technique }}
             </div>
           </div>
