@@ -2,6 +2,7 @@ from django.db import models
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
+
 class Blog(models.Model):
     title = models.CharField(max_length=255)
     production = models.BooleanField(default=True)

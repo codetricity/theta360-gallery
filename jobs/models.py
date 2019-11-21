@@ -1,4 +1,5 @@
 from django.db import models
+from blog.models import Blog
 
 
 class Job(models.Model):
@@ -10,7 +11,9 @@ class Job(models.Model):
     level = models.CharField(max_length=30)
     photographer = models.CharField(max_length=70, default='community')
     photo_studio = models.CharField(max_length=70, default='individual')
-    more_info_url = models.CharField(max_length=200)
+    detail_page = models.ForeignKey(
+        'blog.Blog', on_delete=models.CASCADE,
+        blank=True, null=True)
     technique = models.CharField(max_length=80)
 
     def __str__(self):
