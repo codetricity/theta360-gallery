@@ -17,7 +17,7 @@ class Job(models.Model):
     technique = models.CharField(max_length=80)
 
     def __str__(self):
-        return str(self.order) + self.title
+        return self.title
  
 
 class Viewer(models.Model):
