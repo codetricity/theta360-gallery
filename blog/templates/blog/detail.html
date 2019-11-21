@@ -8,8 +8,20 @@
     {% endblock ga %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content=" {{ blog.title }}RICOH THETA image. Equirectangular image">
+  <meta name="description" content="{{ job.summary }}RICOH THETA image. Equirectangular image">
   <title>{{ blog.title }} RICOH THETA 360 image</title>
+  <meta name="twitter:image" content="{{job.image.url}}" />
+<meta property="og:image" content="{{job.image.url}}" />
+<meta property="og:url" content="https://gallery.theta360.guide/blog/{{job.detail_page.pk}}/" />
+<meta name="twitter:url" content="https://gallery.theta360.guide/blog/{{job.detail_page.pk}}/" />
+<meta property="og:title" content="{{job.title}}" />
+<meta name="twitter:title" content="{{job.title}}" />
+<meta property="og:description" content="{{job.summary}}. Title: {{job.title}} taken using 
+  the RICOH {{job.camera_model}} by 
+  {{job.photographer}} for {{job.photo_studio}} " />
+<meta name="twitter:description" content="{{job.summary}}. Title: {{job.title}} taken using 
+the RICOH {{job.camera_model}} by 
+{{job.photographer}} for {{job.photo_studio}} "" />
 
 
   <!-- Bootstrap core CSS -->
@@ -69,6 +81,7 @@
 
 
         <div>
+
         <h1 class="text-center pt-3">{{ blog.title}} </h1>
 
 
