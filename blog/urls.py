@@ -7,6 +7,7 @@ urlpatterns = [
     path('qualitytuba/', views.qualitytuba, name='qualitytuba'),
 
     path('<int:blog_id>/', views.detail, name='detail'),
+    path('quality/<int:blog_id>/', views.quality_detail, name='quality_detail'),
     path('about/', views.about, name='about'),
     path('award201905/', views.award201905, name='award201905'),
 ]

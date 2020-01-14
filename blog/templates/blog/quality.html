@@ -79,10 +79,12 @@
 
               {% for blog in blogs.all %}
               {% if blog.testing_tag == "quality_tuba" %}
-              {% comment %}
-              <a href="{% url 'detail' blog.id %}">
-                {% endcomment %}
+
+              <a href="/blog/quality/{{blog.id}}/">
+                {% comment %}                
               <a href="{{blog.image.url}}">
+                {% endcomment %}
+
               <div class="col-md-3">
 
                       <h3>{{ blog.title}} </h3>

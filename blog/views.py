@@ -24,6 +24,14 @@ def detail(request, blog_id):
             'job': job
         })
 
+def quality_detail(request, blog_id):
+    detailblog = get_object_or_404(Blog, pk=blog_id)
+    return render(
+        request,
+        'blog/quality_detail.html',
+        {
+            'blog': detailblog
+        })
 
 def about(request):
     return render(request, 'blog/about.html')
